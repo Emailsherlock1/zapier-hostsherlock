@@ -32,13 +32,13 @@ fixtured results and spends no credits.
 
 ```bash
 npm install
-npm install -g zapier-platform-cli   # one-time, for validate/push
-zapier login                          # one-time, your Zapier account
+npm install -g zapier-platform-cli   # one-time; the binary is `zapier-platform`
+zapier-platform login                          # one-time, your Zapier account
 
 cp .env.example .env                  # add a sandbox key to run the live tests
 npm test                              # structural tests; live tests run only with a key
-zapier validate                       # full schema validation
-zapier push                           # upload a new version to your Zapier app
+zapier-platform validate                       # full schema validation
+zapier-platform push                           # upload a new version to your Zapier app
 ```
 
 The `test/app.test.js` live cases are skipped automatically unless
@@ -46,11 +46,11 @@ The `test/app.test.js` live cases are skipped automatically unless
 
 ## Publishing
 
-1. `zapier register "HostSherlock Email Verify"` (first time only — creates the app in
+1. `zapier-platform register "HostSherlock Email Verify"` (first time only — creates the app in
    your Zapier account and writes `.zapierapprc`).
-2. `zapier push` to upload this version.
+2. `zapier-platform push` to upload this version.
 3. In the Zapier developer dashboard, add the app logo and the marketplace
    description, then submit for review to reach **Beta** in the public App
-   Directory. `zapier push` alone does not list the app publicly.
+   Directory. `zapier-platform push` alone does not list the app publicly.
 
 `.zapierapprc` (the app id) and `.env` are gitignored.
