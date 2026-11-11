@@ -28,7 +28,15 @@ Copy follows `emailsherlockv2/docs/voice.md` (no em-dashes, no amplifiers).
 
 ## Reviewer test account
 
-Zapier tests the app with its own account. Give `integration-testing@zapier.com`
-a HostSherlock login that does not expire, a live API key (`es_live_…`) and
-enough credits that the review cannot run out. Paste the key into the
-"Test account" field of the submission form, never into this repo.
+Required by Zapier's publishing requirements, section 7.1
+(https://docs.zapier.com/platform/publish/integration-publishing-requirements):
+the account must use `integration-testing@zapier.com`, must not expire, must
+include the paid features the integration needs (here: enough credits), and
+Zapier support must be able to change its password.
+
+The account exists (created 2026-11-11 by a superadmin, credits gifted, live
+key issued). Put the login URL, `integration-testing@zapier.com`, the password
+and the API key into the "test account" field of the submission form, never
+into this repo. Watch the credit balance and the gift's expiry date while the
+integration is in review and in Beta: an empty balance makes every review
+call fail with 402.
