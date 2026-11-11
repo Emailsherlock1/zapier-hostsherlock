@@ -1,0 +1,48 @@
+{
+  "name": "zapier-hostsherlock",
+  "version": "1.0.0",
+  "description": "Zapier integration for the HostSherlock email verification API.",
+  "keywords": [
+    "zapier",
+    "email",
+    "email-verification",
+    "email-validation",
+    "hostsherlock",
+    "mx",
+    "smtp",
+    "disposable"
+  ],
+  "license": "MIT",
+  "homepage": "https://www.hostsherlock.com/api",
+  "author": {
+    "name": "HostSherlock",
+    "url": "https://www.hostsherlock.com",
+    "email": "service@hostsherlock.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emailsherlock1/zapier-hostsherlock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Emailsherlock1/zapier-hostsherlock/issues"
+  },
+  "private": true,
+  "main": "index.js",
+  "engines": {
+    "node": ">=18",
+    "npm": ">=5.6.0"
+  },
+  "scripts": {
+    "test": "mocha --recursive -t 10000",
+    "build": "zapier build",
+    "push": "zapier push",
+    "validate": "zapier validate --without-style"
+  },
+  "dependencies": {
+    "zapier-platform-core": "19.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.7.0",
+    "should": "^13.2.3"
+  }
+}
