@@ -1,6 +1,6 @@
 {
   "name": "zapier-hostsherlock",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Zapier integration for the HostSherlock email verification API.",
   "keywords": [
     "zapier",
@@ -39,7 +39,7 @@
     "validate": "zapier-platform validate --without-style"
   },
   "dependencies": {
-    "zapier-platform-core": "19.0.0"
+    "zapier-platform-core": "19.3.0"
   },
   "devDependencies": {
     "mocha": "^10.7.0",
