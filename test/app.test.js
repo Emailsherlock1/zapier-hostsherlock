@@ -24,6 +24,13 @@ describe('HostSherlock Zapier app', () => {
     request.skipThrowForStatus.should.equal(true);
   });
 
+  it('returns the /v1/credits body from the auth test, so the label can read plan', async () => {
+    const z = { request: async () => ({ data: { plan: 'Free', sandbox: false } }) };
+    const result = await App.authentication.test(z, {});
+    result.plan.should.equal('Free');
+    App.authentication.connectionLabel.should.equal('HostSherlock ({{plan}})');
+  });
+
   it('turns a 401 into a clear auth error', () => {
     const z = { errors: zapier.errors };
     (() => App.afterResponse[0]({ status: 401, data: {} }, z)).should.throw(/key was rejected/);
